@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>St. Michael's Lent - 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="min-h-screen p-8 bg-white text-gray-800">
+    <div class="max-w-4xl mx-auto relative">
+      <article class="">
+        <header class="mb-8">
+          <h1 class="text-4xl font-bold mb-4 text-gray-900">
+            St. Michael's Lent
+          </h1>
+          <p class="text-lg text-gray-600">
+            August 15, 2025 - September 28, 2025 (<span id="daysRemaining"
+              >...</span
+            >
+            days remaining)
+          </p>
+        </header>
+
+        <section class="space-y-8">
+          <div>
+            <h2 class="text-2xl font-semibold mb-4 text-gray-800">
+              Daily Disciplines
+            </h2>
+            <ul class="list-disc pl-6 space-y-2 text-gray-700">
+              <li>Listen to Daily Scripture & Reflection</li>
+              <li>30 Minutes of Silent Prayer</li>
+              <li>Pray the Nicene Creed</li>
+              <li>Get a Full Night's Sleep (8 hours)</li>
+              <li>Wake Up at the Same Time Each Day</li>
+              <li>No Snoozing the Alarm Clock</li>
+              <li>No Social Media / News</li>
+              <li>Check in with your Anchor</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="text-2xl font-semibold mb-4 text-gray-800">
+              Weekly Disciplines
+            </h2>
+            <ul class="list-disc pl-6 space-y-2 text-gray-700">
+              <li>Weekly Fraternity Meeting</li>
+              <li>Celebrate the Lord's Day (Sunday)</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="text-2xl font-semibold mb-4 text-gray-800">
+              Wednesday & Friday Disciplines
+            </h2>
+            <ul class="list-disc pl-6 space-y-2 text-gray-700">
+              <li>Fast (one meal + two small meals)</li>
+              <li>No Meat (fish, eggs, dairy permitted)</li>
+              <li>Cold Shower</li>
+              <li>Hold Vigil for 1 Hour at 2am Friday Morning</li>
+            </ul>
+          </div>
+        </section>
+
+        <footer class="mt-8">
+          <div class="p-4 bg-gray-100 border-l-4 border-blue-500 rounded">
+            <em class="text-gray-700">
+              God bless you!
+          </div>
+        </footer>
+      </article>
+    </div>
+    <script>
+      function updateDaysRemaining() {
+        const endDate = new Date("2025-09-28T23:59:59");
+        const now = new Date();
+        const diffTime = endDate - now;
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+        const daysElement = document.getElementById("daysRemaining");
+        daysElement.textContent = diffDays;
+      }
+
+      // Update immediately
+      updateDaysRemaining();
+
+      // Update every minute
+      setInterval(updateDaysRemaining, 60000);
+    </script>
+  </body>
+</html>
